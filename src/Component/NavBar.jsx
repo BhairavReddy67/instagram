@@ -1,11 +1,9 @@
 import React from 'react'
 import {FaSistrix,FaTelegramPlane,FaRegHeart,FaRegCompass} from "react-icons/fa"
 import {MdHome} from "react-icons/md"
+import Img from "../Images/profile.jpg"
 
 function NavBar() {
-    const openForms=()=>{
-        
-    }
     return (
         <div className={"navbar"}>
             <div className={"navbar_first"}>
@@ -32,8 +30,8 @@ function NavBar() {
                 <li>
                     <FaRegHeart className="nav_Icons"/>
                 </li>
-                <li onClick={openForms}>
-                    Register/Login
+                <li>
+                    <img src={Img} alt="admin"/>
                 </li>
             </div>
         </div>

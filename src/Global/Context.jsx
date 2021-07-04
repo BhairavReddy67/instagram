@@ -1,9 +1,13 @@
 import React from 'react'
 export const ContextApi=React.createContext()
 function Context({children}) {
-    const [model,setModel]=React.useState(false)
+    const [Auth,setAuth]=React.useState(true)
+    const handleAuth=()=>{
+        setAuth(true)
+    }
+    console.log(Auth)
     return (
-        <ContextApi.Provider value={{model}}>
+        <ContextApi.Provider value={{Auth,handleAuth}}>
             {children}
         </ContextApi.Provider>
     )

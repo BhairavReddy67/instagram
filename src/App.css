@@ -81,9 +81,17 @@ body{
   display: inline-block;
   margin: 0 10px;
 }
-.nav_Icons{
+.nav_Icons,.navbar_last>li>img{
   font-size: 25px;
   cursor: pointer;
+}
+.navbar_last>li>img{
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+  border-radius: 14px;
+  border: 1px solid red;
+  padding: 1px;
 }
 .model{
   width: 100%;
@@ -91,4 +99,83 @@ body{
   top: 0;
   left: 0;
   background: rgba(0,0,0,7);
+}
+.container{
+  width: 100%;
+  padding:0 200px;
+  margin-top:80px;
+}
+.stories{
+  display: flex;
+  background: var(--white);
+  padding: 15px;
+  width: 70%;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+.Inst_login{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.Inst_login>div{
+  width: 50%;
+  margin: 120px auto;
+}
+.image1{
+  width: 40%;
+  height: 400px;
+}
+.form{
+  width: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form>img{
+  align-items: left;
+  text-align: left;
+}
+.stories>div>img{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid #f83a63;
+  margin: 5px 5px 0px 5px;
+  padding: 2px;
+}
+.stories>div>p{
+  font-size: 10px;
+}
+.post_data>div{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #efefef;
+}
+.first_po{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  background:var(--white) ;
+  padding: 10px;
+  border-bottom: #efefef;
+}
+.first_po>img{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  margin:5px;
+}
+.first_po>p{
+  margin: 5px;
+}
+.second_po>img{
+  width: 70%;
 }
