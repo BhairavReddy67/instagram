@@ -3,7 +3,7 @@ export const ContextApi=React.createContext()
 function Context({children}) {
     const [Auth,setAuth]=React.useState(true)
     const handleAuth=()=>{
-        setAuth(true)
+        setAuth(!Auth)
     }
     console.log(Auth)
     return (

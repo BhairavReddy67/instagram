@@ -35,6 +35,7 @@ function Post() {
                         <img src={e.img} alt={e.name}/>
                     </div>
                     <div className="third_po">
+                        
                     </div>
                 </div>)}
         </div>
