@@ -1,7 +1,6 @@
 import React from 'react'
 import {FaSistrix,FaTelegramPlane,FaRegHeart,FaRegCompass} from "react-icons/fa"
 import {MdHome} from "react-icons/md"
-import Img from "../Images/profile.jpg"
 import Popup from "reactjs-popup"
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { BsBookmark } from "react-icons/bs";
@@ -38,7 +37,13 @@ function NavBar() {
                     <FaRegCompass className="nav_Icons"/>
                 </li>
                 <li>
-                    <FaRegHeart className="nav_Icons"/>
+                    <Popup
+                        trigger={<FaRegHeart className="nav_Icons"/>}
+                        position="top center"
+                        on="hover"
+                    >
+                        <Like/>
+                    </Popup>
                 </li>
                 <li>
                     <Popup
@@ -64,5 +69,12 @@ const Card = () => {
         <li className="logout_line" onClick={()=>handleAuthlogout()}>Log Out</li>
     </div>
   );
+}
+
+const Like=()=>{
+    return (
+        <div className="card_1">
+        </div>
+    )
 }
 export default NavBar

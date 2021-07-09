@@ -108,6 +108,8 @@ body{
 .container{
   width: 100%;
   padding:0 200px;
+  display: grid;
+  grid-template-columns: 65% 45%;
   /* margin-top:20px; */
 }
 .stories{
@@ -115,7 +117,7 @@ body{
   display: flex;
   background: var(--white);
   padding: 15px;
-  width: 65%;
+  width: 100%;
   border: 1px solid #efefef;
   border-radius: 3px;
   overflow: hidden;
@@ -149,9 +151,9 @@ body{
   text-align: left;
 }
 .stories>div>img{
-  width: 70px;
-  height: 70px;
-  border-radius: 35px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
   border: 2px solid #f83a63;
   margin: 5px 5px 0px 5px;
   padding: 2px;
@@ -161,7 +163,7 @@ body{
 }
 .post_data>div{
   margin-top: 30px;
-  width: 65%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   border: 2px solid #efefef;
@@ -193,10 +195,7 @@ body{
   background:white;
   border: 2px solid #bebebe;
   border-radius:10px ;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   box-shadow:  0 0 10px -2px #bebebe;
-  
 }
 .card>li{
   list-style-type: none;
@@ -277,4 +276,99 @@ body{
   height: 250px;
   padding: 10px;
   cursor: pointer;
+}
+.sidebar{
+  position: fixed;
+  margin-top: 100px;
+  width: 23%;
+  height: 300px;
+  margin-left: 15px;
+  display: flex;
+  font-size: 12px;
+  flex-direction: column;
+}
+.sidebar_pro,.sidebar_pro_1{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.side1{
+  width: 25%;
+}
+.side2{
+  width: 55%;
+}
+.sidebar_pro>div>img{
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+.sidebar_pro_span{
+  width: 20%;
+  text-align: right; 
+  padding-right:15px ;
+  align-items: flex-end;
+  color:rgb(66, 127, 151)
+}
+.side_1{
+  width: 15%;
+}
+.side_2{
+  width: 70%;
+  text-align: left;
+}
+.side_1>img{
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+.sidebar_pro_1{
+  line-height: 0px;
+}
+.sidebar_pro_1>div{
+  line-height: 15px;
+}
+.profile_link_side{
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  list-style-type: none;
+}
+.container_1{
+  width: 100%;
+  padding: 0px 200px;
+}
+
+.symb{
+  font-size: 15px;
+  background: white;
+  padding: 10px;
+  line-height: 20px;
+}
+.ico{
+  font-size: 50px;
+  padding: 10px ;
+  cursor: pointer;
+  color: #bebebe;
+}
+.ico1{
+  float: right;
+}
+.input{
+  width: 85%;
+  padding: 25px;
+  border: 1px solid white;
+}
+.post_cmt{
+  background: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px solid #bebebe;
+}
+.post_cmt>p{
+  font-size: 15px;
+  color: rgb(66, 127, 151);
+  float: right;
 }

@@ -18,7 +18,7 @@ function Profile() {
     })
     
     return (
-        <div className="container">
+        <div className="container_1">
             <div className="profile_details">
                 <div className="image_pro">
                     <img src={profile.image} alt="pic"/>
