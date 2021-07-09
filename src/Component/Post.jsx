@@ -7,7 +7,9 @@ import Pradeep from "../Images/pradeep.jpg"
 import Vishnu from "../Images/vishnu.jpg"
 import Sree from "../Images/sree.jpg"
 import Praveen from "../Images/praveen.jpg"
+import {ContextApi} from "../Global/Context"
 function Post() {
+    const {data}=React.useContext(ContextApi)
     const status=[
         {img:Shiva,name:"shiva"},
         {img:Raja,name:"Raja_Reddy"},
@@ -26,13 +28,13 @@ function Post() {
     ]
     return (
         <div className="post_data">
-            {status.map(e=><div>
+            {data.map(e=><div>
                     <div className="first_po">
-                        <img src={e.img} alt={e.name}/>
+                        <img src={e.image} alt={e.name}/>
                         <p>{e.name}</p>
                     </div>
                     <div className="second_po">
-                        <img src={e.img} alt={e.name}/>
+                        <img src={e.galary[0]} alt={e.name}/>
                     </div>
                     <div className="third_po">
                         

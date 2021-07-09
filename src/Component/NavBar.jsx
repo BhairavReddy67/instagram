@@ -12,6 +12,8 @@ import {Link} from "react-router-dom"
 
 
 function NavBar() {
+    const {authData}=React.useContext(ContextApi)
+    console.log(authData)
     return (
         <div className={"navbar"}>
             <div className={"navbar_first"}>
@@ -40,7 +42,7 @@ function NavBar() {
                 </li>
                 <li>
                     <Popup
-                        trigger={<img className={"Image_log button"} src={Img} alt="admin"/>}
+                        trigger={<img className={"Image_log button"} src={authData.image} alt="admin"/>}
                         position="bottom center"
                         on="click"
                     >
@@ -53,14 +55,13 @@ function NavBar() {
 }
 
 const Card = () => {
-    const {handleAuth}=React.useContext(ContextApi)
-    console.log(handleAuth)
+    const {handleAuthlogout,authData}=React.useContext(ContextApi)
     return (<div className="card">
-        <li><Link to={"/profile"}  className="profile_link"><IoPersonCircleOutline className="icon_data"/><p>Profile</p></Link></li>
+        <li><Link to={`/profile/${authData.id}`}  className="profile_link"><IoPersonCircleOutline className="icon_data"/><p>Profile</p></Link></li>
         <li><Link to={"/saved"}  className="profile_link"><BsBookmark className="icon_data"/><p>Saved</p></Link></li>
         <li><Link to={"/settings"}  className="profile_link"><IoIosSettings className="icon_data"/><p>Settings</p></Link></li>
         <li><Link to={"/Switch Account"}  className="profile_link"><CgSync className="icon_data"/><p>Switch Account</p></Link></li>
-        <li className="logout_line" onClick={()=>handleAuth()}>Log Out</li>
+        <li className="logout_line" onClick={()=>handleAuthlogout()}>Log Out</li>
     </div>
   );
 }

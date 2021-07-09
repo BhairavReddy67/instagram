@@ -214,7 +214,7 @@ body{
 .profile_link>p{
   margin-left: 8px;
 }
-.profile_link:hover{
+.profile_link:hover,.logout_line:hover{
   background: #efefef;
 }
 .icon_data{
@@ -222,8 +222,9 @@ body{
 }
 .logout_line{
   border-top: 2px solid #efefef;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .card>li:nth-child(1):hover{
@@ -235,3 +236,45 @@ body{
   border-bottom-right-radius:10px ;
 }
 
+.profile_details{
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 50px;
+  border-bottom: 2px solid #efefef;
+}
+.image_pro{
+  width: 30%;
+}
+.image_pro>img{
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+}
+.profile_name{
+  display: flex;
+  flex-direction: column;
+}
+.profile_name>div{
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+}
+.profile_name>div>p{
+  cursor: pointer;
+  padding-right: 35px;
+  font-size: 14px;
+}
+.photos_profile{
+  display: grid;
+  grid-template-columns: repeat(3,33%);
+}
+.photos_profile>img{
+  width: 100%;
+  height: 250px;
+  padding: 10px;
+  cursor: pointer;
+}
